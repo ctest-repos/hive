@@ -5152,7 +5152,7 @@ public class HiveConf extends Configuration {
     ConfigTracker.markParamAsUsed(name);
     return value;
   }
-  
+ 
   public Properties getAllProperties() {
     return getProperties(this);
   }
