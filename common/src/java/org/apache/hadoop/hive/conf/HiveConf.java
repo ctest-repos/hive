@@ -70,6 +70,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import edu.illinois.ConfigTracker;
+
 /**
  * Hive Configuration.
  */
@@ -5126,6 +5128,31 @@ public class HiveConf extends Configuration {
     modWhiteListPattern = other.modWhiteListPattern;
   }
 
+  @Override
+  public void set(String name, String value) {
+    super.set(name, value, null);
+  }
+
+  @Override
+  public void set(String name, String value, String source) {
+    super.set(name, value, source);
+    ConfigTracker.markParamAsSet(name);
+  }
+
+  @Override
+  public String get(String name) {
+    String value = super.get(name);
+    ConfigTracker.markParamAsUsed(name);
+    return value;
+  }
+
+  @Override
+  public String get(String name, String defaultValue) {
+    String value = super.get(name, defaultValue);
+    ConfigTracker.markParamAsUsed(name);
+    return value;
+  }
+  
   public Properties getAllProperties() {
     return getProperties(this);
   }
@@ -5238,6 +5265,8 @@ public class HiveConf extends Configuration {
     hiddenSet.clear();
     hiddenSet.addAll(HiveConfUtil.getHiddenSet(this));
     setupRSCList();
+
+    ConfigTracker.injectConfig((arg1, arg2) -> set(arg1, (String) arg2));
   }
 
   /**
