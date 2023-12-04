@@ -5131,6 +5131,7 @@ public class HiveConf extends Configuration {
   @Override
   public void set(String name, String value) {
     super.set(name, value, null);
+    System.out.println("setProperty: " + name + " = " + value);
   }
 
   @Override

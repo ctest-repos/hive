@@ -17,6 +17,9 @@
  */
 package org.apache.hadoop.hive.conf;
 
+import edu.illinois.CTestClass;
+import edu.illinois.CTestJUnit4Runner;
+
 import com.google.common.collect.Lists;
 import org.apache.hadoop.mapred.JobConf;
 import org.apache.hadoop.conf.Configuration;
@@ -25,6 +28,7 @@ import org.apache.hadoop.util.Shell;
 import org.apache.hive.common.util.HiveTestUtils;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -38,6 +42,8 @@ import java.util.concurrent.TimeUnit;
  * Test cases for HiveConf. Loads configuration files located
  * in common/src/test/resources.
  */
+@RunWith(CTestJUnit4Runner.class)
+@CTestClass
 public class TestHiveConf {
   @Test
   public void testHiveSitePath() throws Exception {
