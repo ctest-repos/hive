@@ -17,6 +17,11 @@
  */
 package org.apache.hadoop.hive.conf;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import org.apache.hadoop.hive.common.LogUtils;
 import org.apache.hadoop.hive.conf.HiveConf.ConfVars;
 import org.apache.logging.log4j.LogManager;
@@ -28,6 +33,8 @@ import org.junit.Test;
 
 import junit.framework.TestCase;
 
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class TestHiveAsyncLogging extends TestCase {
 
   // this test requires disruptor jar in classpath

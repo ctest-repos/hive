@@ -17,6 +17,11 @@
  */
 package org.apache.hadoop.hive.common.metrics;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import java.lang.management.ManagementFactory;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
@@ -37,6 +42,8 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class TestLegacyMetrics {
 
   private static final String scopeName = "foo";

@@ -18,6 +18,11 @@
 
 package org.apache.hadoop.hive.common.type;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -25,6 +30,8 @@ import java.time.ZoneId;
 import java.time.format.DateTimeParseException;
 import java.util.TimeZone;
 
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class TestTimestampTZ {
   @Test
   public void testConvertToUTC() {

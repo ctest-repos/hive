@@ -18,6 +18,11 @@
 
 package org.apache.hive.common.util;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -31,6 +36,8 @@ import org.apache.hadoop.hive.common.FileUtils;
  *
  * Originally taken from o.a.hadoop.util.TestShutdownHookManager
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class TestShutdownHookManager {
 
   @Test

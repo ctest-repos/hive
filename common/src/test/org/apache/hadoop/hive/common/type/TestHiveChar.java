@@ -18,11 +18,18 @@
 
 package org.apache.hadoop.hive.common.type;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import com.google.code.tempusfugit.concurrency.annotations.*;
 import com.google.code.tempusfugit.concurrency.*;
 import org.junit.*;
 import static org.junit.Assert.*;
 
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class TestHiveChar {
 
   @Rule public ConcurrentRule concurrentRule = new ConcurrentRule();

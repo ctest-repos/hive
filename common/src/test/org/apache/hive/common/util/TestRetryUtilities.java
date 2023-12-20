@@ -17,6 +17,11 @@
  */
 package org.apache.hive.common.util;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,6 +30,8 @@ import org.apache.hive.common.util.RetryUtilities.RetryException;
 import org.junit.Assert;
 import org.junit.Test;
 
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class TestRetryUtilities {
 
   private class DummyExponentiallyDecayingBatchWork extends ExponentiallyDecayingBatchWork<Void> {

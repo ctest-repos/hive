@@ -17,6 +17,11 @@
  */
 package org.apache.hadoop.hive.conf;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import com.google.common.collect.Sets;
 import org.junit.Assert;
 import org.junit.Before;
@@ -26,6 +31,8 @@ import org.junit.Test;
  * TestHiveConfUtil
  *
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class TestHiveConfUtil {
 
   private HiveConf conf = new HiveConf();

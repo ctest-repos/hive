@@ -17,6 +17,11 @@
  */
 package org.apache.hive.common.util;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
@@ -33,6 +38,8 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class TestFixedSizedObjectPool {
 
   private static abstract class PoolRunnable implements Runnable {

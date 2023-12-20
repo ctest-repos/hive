@@ -17,6 +17,11 @@
  */
 package org.apache.hadoop.hive.common.type;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.*;
 
 import java.math.BigDecimal;
@@ -33,6 +38,8 @@ import org.junit.Test;
  * This code was based on code from Microsoft's PolyBase.
  */
 
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class TestDecimal128 {
   private Decimal128 zero;
 

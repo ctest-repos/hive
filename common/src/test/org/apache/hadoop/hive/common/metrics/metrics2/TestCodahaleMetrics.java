@@ -17,6 +17,11 @@
  */
 package org.apache.hadoop.hive.common.metrics.metrics2;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import com.codahale.metrics.Counter;
 import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.Timer;
@@ -50,6 +55,8 @@ import static org.junit.Assert.assertTrue;
 /**
  * Unit test for new Metrics subsystem.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class TestCodahaleMetrics {
 
   private static final Path tmpDir = Paths.get(System.getProperty("java.io.tmpdir"));

@@ -17,12 +17,19 @@
  */
 package org.apache.hadoop.hive.conf;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import junit.framework.Assert;
 import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class TestVariableSubstitution {
   private static class LocalMySource {
     final Map<String, String> map = new HashMap<>();

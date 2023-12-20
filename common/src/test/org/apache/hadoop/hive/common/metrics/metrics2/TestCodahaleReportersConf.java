@@ -17,6 +17,11 @@
  */
 package org.apache.hadoop.hive.common.metrics.metrics2;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.lang.reflect.InvocationTargetException;
@@ -33,6 +38,8 @@ import java.io.File;
 /**
  * Unit tests for Codahale reporter config backward compatibility
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class TestCodahaleReportersConf {
 
   private static File workDir = new File(System.getProperty("test.tmp.dir"));

@@ -18,6 +18,11 @@
 package org.apache.hadoop.hive.common.type;
 
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -32,6 +37,8 @@ import com.google.code.tempusfugit.concurrency.RepeatingRule;
 import com.google.code.tempusfugit.concurrency.annotations.Concurrent;
 import com.google.code.tempusfugit.concurrency.annotations.Repeating;
 
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class TestHiveVarchar {
   @Rule public ConcurrentRule concurrentRule = new ConcurrentRule();
   @Rule public RepeatingRule repeatingRule = new RepeatingRule();

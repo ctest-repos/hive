@@ -17,6 +17,11 @@
  */
 package org.apache.hadoop.hive.common.type;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import java.util.Random;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -34,6 +39,8 @@ import org.junit.*;
 
 import static org.junit.Assert.*;
 
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class TestHiveDecimalOrcSerializationUtils extends HiveDecimalTestBase {
 
   //------------------------------------------------------------------------------------------------

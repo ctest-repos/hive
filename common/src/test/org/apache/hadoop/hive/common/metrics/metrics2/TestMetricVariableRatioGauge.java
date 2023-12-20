@@ -17,6 +17,11 @@
  */
 package org.apache.hadoop.hive.common.metrics.metrics2;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import com.codahale.metrics.MetricRegistry;
 import org.apache.hadoop.hive.common.metrics.MetricsTestUtils;
 import org.apache.hadoop.hive.common.metrics.common.MetricsFactory;
@@ -29,6 +34,8 @@ import org.junit.Test;
 /**
  * Unit test for the RatioGauge implementation.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class TestMetricVariableRatioGauge {
 
   public static MetricRegistry metricRegistry;

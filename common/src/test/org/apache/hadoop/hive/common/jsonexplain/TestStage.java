@@ -18,6 +18,11 @@
 
 package org.apache.hadoop.hive.common.jsonexplain;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import org.apache.hadoop.hive.common.jsonexplain.tez.TezJsonParser;
 import org.json.JSONObject;
 import org.junit.Before;
@@ -30,6 +35,8 @@ import java.util.Map;
 
 import static org.junit.Assert.*;
 
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class TestStage {
 
   private Stage uut;

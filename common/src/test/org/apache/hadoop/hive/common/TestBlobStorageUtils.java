@@ -18,6 +18,11 @@
 
 package org.apache.hadoop.hive.common;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
@@ -35,6 +40,8 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
 
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class TestBlobStorageUtils {
   private static final Configuration conf = new Configuration();
 

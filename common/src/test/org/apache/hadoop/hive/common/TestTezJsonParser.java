@@ -18,6 +18,11 @@
 
 package org.apache.hadoop.hive.common;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import org.apache.hadoop.hive.common.jsonexplain.JsonParser;
 import org.apache.hadoop.hive.common.jsonexplain.tez.TezJsonParser;
 import org.json.JSONObject;
@@ -29,6 +34,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
 
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class TestTezJsonParser {
   JsonParser jsonParser = null;
 

@@ -18,6 +18,11 @@
 
 package org.apache.hadoop.hive.common;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
@@ -51,6 +56,8 @@ import org.slf4j.LoggerFactory;
 import com.google.common.collect.Sets;
 import com.google.common.io.Files;
 
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class TestFileUtils {
 
   public static final Logger LOG = LoggerFactory.getLogger(TestFileUtils.class);

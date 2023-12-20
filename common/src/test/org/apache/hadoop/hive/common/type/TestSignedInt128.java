@@ -17,6 +17,11 @@
  */
 package org.apache.hadoop.hive.common.type;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -33,6 +38,8 @@ import org.junit.Test;
  *
  * This code was based on code from Microsoft PolyBase.
  */
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class TestSignedInt128 {
   private SignedInt128 zero;
 

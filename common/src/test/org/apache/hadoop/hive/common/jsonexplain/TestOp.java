@@ -18,6 +18,11 @@
 
 package org.apache.hadoop.hive.common.jsonexplain;
 
+import org.junit.runner.RunWith;
+import edu.illinois.CTestJUnit4Runner2;
+import edu.illinois.CTestClass;
+import edu.illinois.CTest;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.hadoop.hive.common.jsonexplain.tez.TezJsonParser;
@@ -29,6 +34,8 @@ import java.util.*;
 
 import static org.junit.Assert.assertEquals;
 
+@RunWith(CTestJUnit4Runner2.class)
+@CTestClass()
 public class TestOp {
 
   private ObjectMapper objectMapper = new ObjectMapper();
